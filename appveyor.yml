@@ -1,0 +1,14 @@
+# Пример .appveyor.yml для AppVeyor
+#version: 1.0.24
+
+# Определяем образ ОС для сборки
+image: Visual Studio 2019
+
+# Указываем команды для установки зависимостей
+install:
+  - pip install flask
+  - pip install gunicorn
+
+# Указываем команды для сборки и запуска приложения
+build_script:
+  - st.bat  # Запуск вашего бат-файла
